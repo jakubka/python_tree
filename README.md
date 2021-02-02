@@ -19,3 +19,8 @@ pytest stack.py
 
 - 🔴 **Thursday 4th February**: `test_get_root_number`
 - 🔴 **Friday 5th February**: `test_count_elements`, `test_count_elements2`
+
+# Test results
+
+- **Tuesday 2nd February**:
+https://github.com/jakubka/python_tree/issues/1#issue-799376549
