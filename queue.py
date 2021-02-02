@@ -35,6 +35,15 @@ def get_content():
         l.append(a[i])
     return l
 
+def is_empty():
+    pass
+
+def is_full():
+    pass
+
+def is_sorted():
+    pass
+
 #########################################################
 
 def test_empty():
@@ -71,7 +80,74 @@ def test_enqueue_full():
 #     enqueue(123)
 #     enqueue(555)
 #     assert dequeue() == 123
+#     assert dequeue() == 555
 
 # def test_dequeue_empty():
 #     create_empty_queue()
 #     assert dequeue() == "Queue is empty"
+
+def test_is_empty_yes():
+    create_empty_queue()
+    enqueue(1)
+    dequeue()
+    assert is_empty() == True
+
+def test_is_empty_no():
+    create_empty_queue()
+    enqueue(1)
+    assert is_empty() == False
+
+def test_is_full_yes():
+    create_empty_queue(3)
+    enqueue(1)
+    enqueue(2)
+    enqueue(3)
+    assert is_full() == True
+
+def test_is_full_no():
+    create_empty_queue(3)
+    enqueue(1)
+    enqueue(2)
+    assert is_full() == False
+
+def test_cycling():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
+    enqueue(3)
+    enqueue(4)
+    dequeue()
+    dequeue()
+    dequeue()
+    enqueue(5)
+    enqueue(6)
+    enqueue(7)
+    assert get_content() == [4, 5, 6, 7]
+    enqueue(8)
+    assert enqueue(9) == "Queue is full"
+
+def test_is_sorted_yes():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
+    dequeue()
+    dequeue()
+    enqueue(3)
+    enqueue(4)
+    enqueue(5)
+    enqueue(6)
+    enqueue(7)
+    assert is_sorted() == True
+
+def test_is_sorted_no():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
+    dequeue()
+    dequeue()
+    enqueue(3)
+    enqueue(4)
+    enqueue(5)
+    enqueue(1)
+    enqueue(2)
+    assert is_sorted() == False

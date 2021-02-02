@@ -14,11 +14,18 @@ pytest stack.py
 - 🔴 **Monday 1st February**: `test_empty`
 - 🔴 **Tuesday 2nd February**: `test_enqueue`, `test_enqueue2`, `test_enqueue_full`
 - 🔴 **Wednesday 3rd February**: `test_dequeue`, `test_dequeue2`, `test_dequeue_empty`
+- 🔴 **Thursday 4th February**: `test_is_empty_yes/no`, `test_is_full_yes/no`, `test_cycling`
+- 🔴 **Friday 5th February**: `test_is_sorted`, __**Code Review**__
 
 `binary_tree.py`:
 
-- 🔴 **Thursday 4th February**: `test_get_root_number`
-- 🔴 **Friday 5th February**: `test_count_elements`, `test_count_elements2`
+- 🔴 **Monday 8th February**: `test_get_root_number`
+- 🔴 **Tuesday 9th February**: `test_count_elements`, `test_count_elements2`
+- 🔴 **Wednesday 10th February**: ?
+- 🔴 **Thursday 11th February**: ?
+- 🔴 **Friday 12th February**: ?, __**Code Review**__
+
+`stack_class.py`
 
 # Test results
 
