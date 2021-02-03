@@ -31,3 +31,5 @@ pytest stack.py
 
 - **Tuesday 2nd February**:
 https://github.com/jakubka/python_tree/issues/1#issue-799376549
+- **Wednesday 3rd February**:
+https://github.com/jakubka/python_tree/issues/2#issue-800362919
