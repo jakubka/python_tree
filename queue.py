@@ -18,6 +18,11 @@ def enqueue(number):
         kon = n - 1
     elif n == n_max:
         return "Queue is full" 
+    elif kon == n_max and n != n_max:
+        kon = 0
+        kon = kon + 1
+        a[kon] = number 
+        n = n + 1
     else:
         a[n] = number 
         n = n + 1 
@@ -40,20 +45,38 @@ def dequeue():
         
 
 def get_content():
-    global n_max, a, n
+    global n_max, a, n, zac, kon
     l = []
     for i in range(0, n):
         l.append(a[i])
     return l
 
 def is_empty():
-    pass
+    global n_max, a, n, zac, kon
+    if n == 0: 
+        return True
+    else: 
+        return False 
+
 
 def is_full():
-    pass
+    global n_max, a, n, zac, kon
+    if n == n_max:
+        return True 
+    else:
+        return False
 
 def is_sorted():
-    pass
+    global n_max, a, n, zac, kon
+    while True: 
+        for i in range(0, n - 1):
+            if i <= i + 1:
+                return True  
+            else:
+                return False
+             
+
+
 
 #########################################################
 
@@ -97,68 +120,68 @@ def test_dequeue_empty():
     create_empty_queue()
     assert dequeue() == "Queue is empty"
 
-# def test_is_empty_yes():
-#     create_empty_queue()
-#     enqueue(1)
-#     dequeue()
-#     assert is_empty() == True
+def test_is_empty_yes():
+    create_empty_queue()
+    enqueue(1)
+    dequeue()
+    assert is_empty() == True
 
-# def test_is_empty_no():
-#     create_empty_queue()
-#     enqueue(1)
-#     assert is_empty() == False
+def test_is_empty_no():
+    create_empty_queue()
+    enqueue(1)
+    assert is_empty() == False
 
-# def test_is_full_yes():
-#     create_empty_queue(3)
-#     enqueue(1)
-#     enqueue(2)
-#     enqueue(3)
-#     assert is_full() == True
+def test_is_full_yes():
+    create_empty_queue(3)
+    enqueue(1)
+    enqueue(2)
+    enqueue(3)
+    assert is_full() == True
 
-# def test_is_full_no():
-#     create_empty_queue(3)
-#     enqueue(1)
-#     enqueue(2)
-#     assert is_full() == False
+def test_is_full_no():
+    create_empty_queue(3)
+    enqueue(1)
+    enqueue(2)
+    assert is_full() == False
 
-# def test_cycling():
-#     create_empty_queue(5) # size = 5
-#     enqueue(1)
-#     enqueue(2)
-#     enqueue(3)
-#     enqueue(4)
-#     dequeue()
-#     dequeue()
-#     dequeue()
-#     enqueue(5)
-#     enqueue(6)
-#     enqueue(7)
-#     assert get_content() == [4, 5, 6, 7]
-#     enqueue(8)
-#     assert enqueue(9) == "Queue is full"
+def test_cycling():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
+    enqueue(3)
+    enqueue(4)
+    dequeue()
+    dequeue()
+    dequeue()
+    enqueue(5)
+    enqueue(6)
+    enqueue(7)
+    assert get_content() == [4, 5, 6, 7]
+    enqueue(8)
+    assert enqueue(9) == "Queue is full"
 
-# def test_is_sorted_yes():
-#     create_empty_queue(5) # size = 5
-#     enqueue(1)
-#     enqueue(2)
-#     dequeue()
-#     dequeue()
-#     enqueue(3)
-#     enqueue(4)
-#     enqueue(5)
-#     enqueue(6)
-#     enqueue(7)
-#     assert is_sorted() == True
+def test_is_sorted_yes():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
+    dequeue()
+    dequeue()
+    enqueue(3)
+    enqueue(4)
+    enqueue(5)
+    enqueue(6)
+    enqueue(7)
+    assert is_sorted() == True
 
-# def test_is_sorted_no():
-#     create_empty_queue(5) # size = 5
-#     enqueue(1)
-#     enqueue(2)
-#     dequeue()
-#     dequeue()
-#     enqueue(3)
-#     enqueue(4)
-#     enqueue(5)
-#     enqueue(1)
-#     enqueue(2)
-#     assert is_sorted() == False
+def test_is_sorted_no():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
+    dequeue()
+    dequeue()
+    enqueue(3)
+    enqueue(4)
+    enqueue(5)
+    enqueue(1)
+    enqueue(2)
+    assert is_sorted() == False
