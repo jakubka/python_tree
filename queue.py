@@ -68,15 +68,21 @@ def is_full():
 
 def is_sorted():
     global n_max, a, n, zac, kon
-    while True: 
-        for i in range(0, n - 1):
-            if i <= i + 1:
-                return True  
-            else:
-                return False
-             
+    sort_check = True
+    for i in range(1, n - 1): 
+        if a[i] < a[i - 1]: 
+            sort_check = False
+        i = i + 1                 
+    return sort_check 
 
-
+def is_sorted_cycling():
+    global n_max, a, n, zac, kon
+    sort_check = True
+    for i in range(zac + 1, kon): 
+        if a[zac + 1] < a[zac]: 
+            sort_check = False
+        zac =  zac + 1                
+    return sort_check     
 
 #########################################################
 
@@ -164,6 +170,24 @@ def test_is_sorted_yes():
     create_empty_queue(5) # size = 5
     enqueue(1)
     enqueue(2)
+    enqueue(3)
+    enqueue(4)
+    enqueue(5)
+    assert is_sorted() == True
+
+def test_is_sorted_no():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
+    enqueue(4)
+    enqueue(3)
+    enqueue(5)
+    assert is_sorted() == False    
+
+def test_is_sorted_cycling_yes():
+    create_empty_queue(5) # size = 5
+    enqueue(1)
+    enqueue(2)
     dequeue()
     dequeue()
     enqueue(3)
@@ -171,9 +195,9 @@ def test_is_sorted_yes():
     enqueue(5)
     enqueue(6)
     enqueue(7)
-    assert is_sorted() == True
+    assert is_sorted_cycling() == True
 
-def test_is_sorted_no():
+def test_is_sorted_cycling_no():
     create_empty_queue(5) # size = 5
     enqueue(1)
     enqueue(2)
@@ -184,4 +208,4 @@ def test_is_sorted_no():
     enqueue(5)
     enqueue(1)
     enqueue(2)
-    assert is_sorted() == False
+    assert is_sorted_cycling() == False
