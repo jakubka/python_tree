@@ -23,19 +23,27 @@ pytest stack.py
 
 ## Week 2
 
-- 🔴 **Monday 8th February**: __**Debugging lesson**__
+break
+
+## Week 3
+
+- 🔴 **Monday 15th February**: __**Debugging lesson**__
 
 `queue.py`:
 
-- 🔴 **Tuesday 9th February**: __**PR comments fixes**__
+- 🔴 **Tuesday 16th February**: __**PR comments fixes**__
 
 `binary_tree.py`:
 
-- 🔴 **Wednesday 10th February**: `test_get_root_number`
-- 🔴 **Thursday 11th February**: `test_count_elements`, `test_count_elements2`
-- 🔴 **Friday 12th February**: ?
+- 🔴 **Wednesday 17th February**: `test_get_root_number`
+- 🔴 **Thursday 18th February**: `test_count_elements`, `test_count_elements2`
+- 🔴 **Friday 19th February**: ?
 
-`stack_class.py`
+## Week 4
+
+`binary_tree.py`:
+
+`stack_class.py`:
 
 # Test results
 
