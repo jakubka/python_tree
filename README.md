@@ -35,8 +35,8 @@ break
 
 `binary_tree.py`:
 
-- 🔴 **Wednesday 17th February**: `test_get_root_number`
-- 🔴 **Thursday 18th February**: `test_count_elements`, `test_count_elements2`
+- 🔴 **Wednesday 17th February**: `test_get_root_number`, `test_count_elements`, `test_count_elements2`
+- 🔴 **Thursday 18th February**: ?
 - 🔴 **Friday 19th February**: ?
 
 ## Week 4
