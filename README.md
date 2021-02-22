@@ -27,27 +27,16 @@ break
 
 ## Week 3
 
-- 🔴 **Monday 15th February**: __**Debugging lesson**__
+- 💚 **Monday 15th February**: __**Debugging lesson**__
 
-`queue.py`:
-
-- 🔴 **Tuesday 16th February**: __**PR comments fixes**__
-
-`binary_tree.py`:
-
-- 🔴 **Wednesday 17th February**: `test_get_root_number`, `test_count_elements`, `test_count_elements2`
-- 🔴 **Thursday 18th February**: ?
-- 🔴 **Friday 19th February**: ?
+break
 
 ## Week 4
 
-`binary_tree.py`:
+`queue.py`:
 
-`stack_class.py`:
+- 🔴 **Friday 26th February**: __**PR comments fixes**__
 
-# Test results
+## Week 5
 
-- **Tuesday 2nd February**:
-https://github.com/jakubka/python_tree/issues/1#issue-799376549
-- **Wednesday 3rd February**:
-https://github.com/jakubka/python_tree/issues/2#issue-800362919
+Java
